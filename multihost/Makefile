@@ -23,7 +23,7 @@
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-export TEST=/CoreOS/restraint/test1
+export TEST=/CoreOS/restraint/multihost
 export TESTVERSION=1.0
 
 BUILT_FILES=
@@ -35,7 +35,7 @@ FILES=$(METADATA) runtest.sh Makefile
 run: $(FILES) build
 	./runtest.sh
 build: $(BUILT_FILES)
-	test -x runtest.sh || chmod a+x runtest.sh
+	test -x runtest.sh || chmod a+x runtest.sh || chmod a+x test_s.sh
 clean:
 	rm -f *~ $(BUILT_FILES)
 
