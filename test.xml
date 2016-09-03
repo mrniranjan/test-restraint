@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<job>
+  <recipeSet>
+   <recipe role="CLIENT" id="1">
+    <task name="/CoreOS/restraint/test1">
+        <fetch url="git://client1.example.test/test-restraint" />
+    </task>
+    <task name="/CoreOS/restraint/multihost" role="CLIENT">
+        <fetch url="git://client1.example.test/test-restraint#multihost" />
+    </task>
+   </recipe>
+   <recipe role="SERVER" id="2">
+       <task name="/CoreOS/restraint/multihost" role="SERVER">
+           <fetch url="git://client1.example.test/test-restraint#multihost" />
+        </task>
+    </recipe>
+  </recipeSet>
+</job>
