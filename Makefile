@@ -23,7 +23,7 @@
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-export TEST=/CoreOS/CS/installaion/openldap-servers
+export TEST=/CoreOS/restraint/test1
 export TESTVERSION=1.0
 
 BUILT_FILES=
