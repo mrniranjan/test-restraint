@@ -31,17 +31,17 @@
 
 Client() {
     rlPhaseStartTest Client
-        rhts-sync-block -s "READY_1" ${SERVER}
+        rhts-sync-block -s "READY" ${SERVER}
         rlRun "date > ~/client"
-        rhts-sync-set -s "DONE_1"
+        rhts-sync-set -s "DONE"
     rlPhaseEnd
 }
 
 Server() {
     rlPhaseStartTest Server
         rlRun "date > ~/server"
-        rhts-sync-set -s "READY_2"
-        rhts-sync-block -s "DONE_2" ${CLIENT}
+        rhts-sync-set -s "READY"
+        rhts-sync-block -s "DONE" ${CLIENT}
     rlPhaseEnd
 }
 
